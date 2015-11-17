@@ -101,21 +101,6 @@ class Builder extends EloquentBuilder
     */
 
     /**
-     * Execute the query as a "select" statement.
-     *
-     * @param  array $columns
-     * @return \Illuminate\Database\Eloquent\Collection
-     */
-    public function get($columns = ['*'])
-    {
-        if ($this->query->from instanceof Subquery) {
-            $this->wheresToSubquery($this->query->from);
-        }
-
-        return parent::get($columns);
-    }
-
-    /**
      * Set the columns to be selected.
      *
      * @param  array  $columns

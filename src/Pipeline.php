@@ -3,8 +3,8 @@
 namespace Sofa\Hookable;
 
 use Closure;
-use Sofa\Hookable\Contracts\ArgumentBag;
 use Sofa\Hookable\Contracts\Pipeline as PipelineContract;
+use Sofa\Hookable\Contracts\ArgumentBag as ArgumentBagContract;
 
 class Pipeline implements PipelineContract
 {
@@ -62,7 +62,7 @@ class Pipeline implements PipelineContract
     /**
      * @inheritdoc
      */
-    public function with(ArgumentBag $args)
+    public function with(ArgumentBagContract $args)
     {
         $this->args = $args;
 
