@@ -1,9 +1,9 @@
 <?php
 
 use kahlan\plugin\Stub;
-use Sofa\Hookable\Pipeline\Pipeline;
+use Sofa\Hookable\Pipeline;
 
-describe('\Sofa\Hookable\Pipeline\Pipeline', function () {
+describe('\Sofa\Hookable\Pipeline', function () {
 
     it('delivers payload to destination', function () {
         $pipeline    = new Pipeline;
