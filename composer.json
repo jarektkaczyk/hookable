@@ -1,0 +1,32 @@
+{
+    "name": "sofa/hookable",
+    "description": "Laravel Eloquent hooks system.",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/jarektkaczyk/hookable/issues",
+        "source": "https://github.com/jarektkaczyk/hookable"
+    },
+    "keywords": ["eloquent", "laravel"],
+    "authors": [
+        {
+            "name": "Jarek Tkaczyk",
+            "email": "jarek@softonsofa.com",
+            "homepage": "http://softonsofa.com/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9"
+    },
+    "require-dev": {
+        "crysalead/kahlan": "~1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sofa\\Hookable\\": "src/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    }
+}
