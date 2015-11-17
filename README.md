@@ -1,6 +1,6 @@
 # Sofa/Hookable
 
-[![Build Status](https://travis-ci.org/jarektkaczyk/hookable.svg)](https://travis-ci.org/jarektkaczyk/hookable) [![stable](https://poser.pugx.org/sofa/eloquence/v/stable.svg)](https://packagist.org/packages/sofa/eloquence)
+[![Build Status](https://travis-ci.org/jarektkaczyk/hookable.svg)](https://travis-ci.org/jarektkaczyk/hookable) [![stable](https://poser.pugx.org/sofa/hookable/v/stable.svg)](https://packagist.org/packages/sofa/hookable)
 
 Hooks system for the Eloquent ORM (Laravel 5.1+ LTS).
 
@@ -15,6 +15,14 @@ Hooks are available fro the following methods:
 * `Model::__unset`
 
 and all methods available on the `Illuminate\Database\Eloquent\Builder` class.
+
+## Installation
+
+Clone the repo or pull as composer dependency:
+
+```
+composer require sofa/hookable:~1.0
+```
 
 ## Usage
 
