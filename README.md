@@ -4,7 +4,7 @@
 
 Hooks system for the Eloquent ORM (Laravel 5.1+ LTS).
 
-Hooks are available fro the following methods:
+Hooks are available for the following methods:
 
 * `Model::getAttribute`
 * `Model::setAttribute`
@@ -27,6 +27,8 @@ composer require sofa/hookable:~1.0
 ## Usage
 
 In order to register a hook you use static method `hook` on the model: [example](https://github.com/jarektkaczyk/eloquence/blob/5.1/src/Mappable.php#L42-L56).
+
+To remove all hooks from a model use the static method `flushHooks`.
 
 **Important** Due to the fact that PHP will not let you bind a `Closure` to your model's instance if it is created **in a static context** (for example model's `boot` method), you need to hack it a little bit, in that the closure is created in an object context. 
 

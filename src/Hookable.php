@@ -30,6 +30,16 @@ trait Hookable
     }
 
     /**
+     * Remove all of the hooks on the Eloquent model.
+     *
+     * @return void
+     */
+    public static function flushHooks()
+    {
+        static::$hooks = [];
+    }
+
+    /**
      * Create new Hookable query builder for the instance.
      *
      * @param  \Illuminate\Database\Query\Builder
