@@ -137,6 +137,27 @@ trait Hookable
     }
 
     /**
+     * Register hook for isDirty.
+     *
+     * @param null $attributes
+     * @return bool
+     */
+    public function isDirty($attributes = null)
+    {
+        if (!is_array($attributes)) {
+            $attributes = func_get_args();
+        }
+        $hooks       = $this->boundHooks(__FUNCTION__);
+        $params      = compact('attributes');
+        $payload     = $attributes;
+        $destination = function ($attributes) {
+            return call_user_func_array(array($this, 'parent::isDirty'), $attributes);
+        };
+
+        return $this->pipe($hooks, $payload, $params, $destination);
+    }
+
+    /**
      * Register hook for toArray.
      *
      * @return mixed
