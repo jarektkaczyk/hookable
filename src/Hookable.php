@@ -144,9 +144,10 @@ trait Hookable
      */
     public function isDirty($attributes = null)
     {
-        if (!is_array($attributes)) {
+        if (! is_array($attributes) && !is_null($attributes)) {
             $attributes = func_get_args();
         }
+
         $hooks       = $this->boundHooks(__FUNCTION__);
         $params      = compact('attributes');
         $payload     = $attributes;
