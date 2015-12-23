@@ -438,9 +438,10 @@ class Builder extends EloquentBuilder
      * Get a single column's value from the first result of a query.
      *
      * @param  string  $column
+     * @param  string  $key
      * @return mixed
      */
-    public function pluck($column)
+    public function pluck($column, $key = null)
     {
         return $this->value($column);
     }
