@@ -1,8 +1,8 @@
 # Sofa/Hookable
 
-[![Build Status](https://travis-ci.org/jarektkaczyk/hookable.svg)](https://travis-ci.org/jarektkaczyk/hookable) [![stable](https://poser.pugx.org/sofa/hookable/v/stable.svg)](https://packagist.org/packages/sofa/hookable)
+[![Build Status](https://travis-ci.org/jarektkaczyk/hookable.svg)](https://travis-ci.org/jarektkaczyk/hookable) [![stable](https://poser.pugx.org/sofa/hookable/v/stable.svg)](https://packagist.org/packages/sofa/hookable) [![Downloads](https://poser.pugx.org/sofa/hookable/downloads)](https://packagist.org/packages/sofa/hookable)
 
-Hooks system for the Eloquent ORM (Laravel 5.1+ LTS).
+Hooks system for the [Eloquent ORM (Laravel 5.1+ LTS)](https://laravel.com/docs/5.1/eloquent).
 
 Hooks are available for the following methods:
 
@@ -11,6 +11,7 @@ Hooks are available for the following methods:
 * `Model::save`
 * `Model::toArray`
 * `Model::replicate`
+* `Model::isDirty`
 * `Model::__isset`
 * `Model::__unset`
 
@@ -21,7 +22,7 @@ and all methods available on the `Illuminate\Database\Eloquent\Builder` class.
 Clone the repo or pull as composer dependency:
 
 ```
-composer require sofa/hookable:~1.0
+composer require sofa/hookable:5.1.*
 ```
 
 ## Usage
