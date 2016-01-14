@@ -435,14 +435,15 @@ class Builder extends EloquentBuilder
     }
 
     /**
-     * Get a single column's value from the first result of a query.
+     * Get an array with the values of a given column.
      *
      * @param  string  $column
-     * @return mixed
+     * @param  string|null  $key
+     * @return array
      */
-    public function pluck($column)
+    public function pluck($column, $key = null)
     {
-        return $this->value($column);
+        return $this->callHook(__FUNCTION__, $this->packArgs(compact('column', 'key')));
     }
 
     /**
@@ -534,7 +535,7 @@ class Builder extends EloquentBuilder
      */
     public function lists($column, $key = null)
     {
-        return $this->callHook(__FUNCTION__, $this->packArgs(compact('column', 'key')));
+        return $this->pluck($column, $key);
     }
 
     /**
