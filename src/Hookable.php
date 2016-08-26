@@ -122,15 +122,15 @@ trait Hookable
      */
     public function save(array $options = [])
     {
-        if (!parent::save($options)) {
+        if (!($saved = parent::save($options)) && $this->isDirty()) {
             return false;
         }
 
         $hooks       = $this->boundHooks(__FUNCTION__);
         $params      = compact('options');
         $payload     = true;
-        $destination = function () {
-            return true;
+        $destination = function () use ($saved) {
+            return $saved;
         };
 
         return $this->pipe($hooks, $payload, $params, $destination);
