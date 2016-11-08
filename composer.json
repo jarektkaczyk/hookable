@@ -20,7 +20,7 @@
         "illuminate/database": "5.2.*"
     },
     "require-dev": {
-        "crysalead/kahlan": "~1.1"
+        "kahlan/kahlan": "~1.1"
     },
     "autoload": {
         "psr-4": {
