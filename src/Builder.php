@@ -32,7 +32,7 @@ class Builder extends EloquentBuilder
      */
     protected $passthru = array(
         'toSql', 'lists', 'insert', 'insertGetId', 'pluck', 'value', 'count', 'raw',
-        'min', 'max', 'avg', 'sum', 'exists', 'getBindings', 'aggregate',
+        'min', 'max', 'avg', 'sum', 'exists', 'getBindings', 'aggregate', 'getConnection'
     );
 
     /*
