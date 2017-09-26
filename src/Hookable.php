@@ -178,6 +178,8 @@ trait Hookable
     /**
      * Register hook for replicate.
      *
+     * @param array|null $except
+     *
      * @return mixed
      */
     public function replicate(array $except = null)
