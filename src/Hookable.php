@@ -142,7 +142,7 @@ trait Hookable
      * @param null $attributes
      * @return bool
      */
-    public function isDirty($attributes = null)
+    /*public function isDirty($attributes = null)
     {
         if (! is_array($attributes) && !is_null($attributes)) {
             $attributes = func_get_args();
@@ -156,7 +156,7 @@ trait Hookable
         };
 
         return $this->pipe($hooks, $payload, $params, $destination);
-    }
+    }*/
 
     /**
      * Register hook for toArray.
