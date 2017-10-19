@@ -139,10 +139,10 @@ trait Hookable
     /**
      * Register hook for isDirty.
      *
-     * @param array $attributes
+     * @param null $attributes
      * @return bool
      */
-    public function isDirty($attributes = [])
+    public function isDirty($attributes = null)
     {
         if (! is_array($attributes) && !is_null($attributes)) {
             $attributes = func_get_args();
