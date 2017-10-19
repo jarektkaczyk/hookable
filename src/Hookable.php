@@ -144,7 +144,7 @@ trait Hookable
      */
     public function isDirty($attributes = null)
     {
-        if (! is_array($attributes) && !is_null($attributes)) {
+        if (! is_array($attributes)) {
             $attributes = func_get_args();
         }
 
