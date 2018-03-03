@@ -20,6 +20,6 @@ describe('Sofa\Hookable\Builder', function () {
         $model = Stub::create();
         expect($model)->toReceive('queryHook');
         Stub::on($this->builder)->method('getModel', function () use ($model) {return $model;});
-        $this->builder->select('column', 'value');
+        $this->builder->select(['column', 'value']);
     });
 });
