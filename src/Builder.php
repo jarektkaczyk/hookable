@@ -17,12 +17,12 @@ class Builder extends EloquentBuilder
      * @var array
      */
     protected $operators = [
-        '=', '<', '>', '<=', '>=', '<>', '!=',
+        '=', '<', '>', '<=', '>=', '<>', '!=', '<=>',
         'like', 'like binary', 'not like', 'between', 'ilike',
         '&', '|', '^', '<<', '>>',
         'rlike', 'regexp', 'not regexp',
         '~', '~*', '!~', '!~*', 'similar to',
-                'not similar to',
+        'not similar to', 'not ilike', '~~*', '!~~*',
     ];
 
     /**
@@ -31,8 +31,8 @@ class Builder extends EloquentBuilder
      * @var array
      */
     protected $passthru = [
-        'toSql', 'lists', 'insert', 'insertGetId', 'pluck', 'value', 'count', 'raw',
-        'min', 'max', 'avg', 'sum', 'exists', 'getBindings', 'aggregate', 'getConnection'
+        'toSql', 'lists', 'insert', 'insertGetId', 'pluck', 'value', 'count', 'raw', 'min', 'max',
+        'avg', 'sum', 'exists', 'doesntExist', 'getBindings', 'aggregate', 'getConnection'
     ];
 
     /*
