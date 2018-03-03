@@ -30,10 +30,10 @@ class Builder extends EloquentBuilder
      *
      * @var array
      */
-    protected $passthru = array(
+    protected $passthru = [
         'toSql', 'lists', 'insert', 'insertGetId', 'pluck', 'value', 'count', 'raw',
         'min', 'max', 'avg', 'sum', 'exists', 'getBindings', 'aggregate', 'getConnection'
-    );
+    ];
 
     /*
     |--------------------------------------------------------------------------
@@ -204,7 +204,6 @@ class Builder extends EloquentBuilder
     {
         return $this->whereNotBetween($column, $values, 'or');
     }
-
 
     /**
      * Add a "where in" clause to the query.
