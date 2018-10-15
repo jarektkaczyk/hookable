@@ -400,6 +400,17 @@ class Builder extends EloquentBuilder
     }
 
     /**
+     * Add a "group by" clause to the query.
+     *
+     * @param  array  ...$groups
+     * @return $this
+     */
+    public function groupBy(...$groups)
+    {
+      return $this->callHook(__FUNCTION__, $this->packArgs(compact('groups')));
+    }
+
+    /**
      * Add an "order by" clause to the query.
      *
      * @param  string  $column
