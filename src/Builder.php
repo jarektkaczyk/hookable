@@ -62,7 +62,7 @@ class Builder extends EloquentBuilder
      */
     protected function callHook($method, ArgumentBag $args)
     {
-        if ($this->hasHook($args->get('column')) || in_array($method, ['select', 'addSelect'])) {
+        if ($this->hasHook($args->get('column')) || in_array($method, ['select', 'addSelect', 'groupBy'])) {
             return $this->getModel()->queryHook($this, $method, $args);
         }
 
