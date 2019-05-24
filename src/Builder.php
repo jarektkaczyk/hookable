@@ -62,7 +62,7 @@ class Builder extends EloquentBuilder
      */
     protected function callHook($method, ArgumentBag $args)
     {
-        if ($this->hasHook($args->get('column')) || in_array($method, ['select', 'addSelect'])) {
+        if ($this->hasHook($args->get('column')) || in_array($method, ['select', 'addSelect', 'groupBy'])) {
             return $this->getModel()->queryHook($this, $method, $args);
         }
 
@@ -397,6 +397,17 @@ class Builder extends EloquentBuilder
         $this->query->mergeBindings($query);
 
         return $this;
+    }
+
+    /**
+     * Add a "group by" clause to the query.
+     *
+     * @param  array  ...$groups
+     * @return $this
+     */
+    public function groupBy(...$groups)
+    {
+      return $this->callHook(__FUNCTION__, $this->packArgs(compact('groups')));
     }
 
     /**
