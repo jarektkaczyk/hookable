@@ -100,7 +100,7 @@ trait Hookable
      *
      * @param  string $key
      * @param  mixed  $value
-     * @return void
+     * @return mixed
      */
     public function setAttribute($key, $value)
     {
@@ -111,7 +111,9 @@ trait Hookable
             parent::setAttribute($key, $value);
         };
 
-        return $this->pipe($hooks, $payload, $params, $destination);
+        $this->pipe($hooks, $payload, $params, $destination);
+
+        return $this;
     }
 
     /**
@@ -144,7 +146,7 @@ trait Hookable
      */
     public function isDirty($attributes = null)
     {
-        if (! is_array($attributes) && !is_null($attributes)) {
+        if (! is_array($attributes)) {
             $attributes = func_get_args();
         }
 

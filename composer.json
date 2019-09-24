@@ -16,8 +16,8 @@
         }
     ],
     "require": {
-        "php": ">=5.6.4",
-        "illuminate/database": "5.3.*|5.4.*"
+        "php": ">=7.2",
+        "illuminate/database": "^5.4|^6.0"
     },
     "require-dev": {
         "crysalead/kahlan": "~1.1"

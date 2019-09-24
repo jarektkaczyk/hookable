@@ -17,12 +17,12 @@ class Builder extends EloquentBuilder
      * @var array
      */
     protected $operators = [
-        '=', '<', '>', '<=', '>=', '<>', '!=',
+        '=', '<', '>', '<=', '>=', '<>', '!=', '<=>',
         'like', 'like binary', 'not like', 'between', 'ilike',
         '&', '|', '^', '<<', '>>',
         'rlike', 'regexp', 'not regexp',
         '~', '~*', '!~', '!~*', 'similar to',
-                'not similar to',
+        'not similar to', 'not ilike', '~~*', '!~~*',
     ];
 
     /**
@@ -30,10 +30,10 @@ class Builder extends EloquentBuilder
      *
      * @var array
      */
-    protected $passthru = array(
-        'toSql', 'lists', 'insert', 'insertGetId', 'pluck', 'value', 'count', 'raw',
-        'min', 'max', 'avg', 'sum', 'exists', 'getBindings', 'aggregate', 'getConnection'
-    );
+    protected $passthru = [
+        'toSql', 'lists', 'insert', 'insertGetId', 'pluck', 'value', 'count', 'raw', 'min', 'max',
+        'avg', 'sum', 'exists', 'doesntExist', 'getBindings', 'aggregate', 'getConnection'
+    ];
 
     /*
     |--------------------------------------------------------------------------
@@ -204,7 +204,6 @@ class Builder extends EloquentBuilder
     {
         return $this->whereNotBetween($column, $values, 'or');
     }
-
 
     /**
      * Add a "where in" clause to the query.
