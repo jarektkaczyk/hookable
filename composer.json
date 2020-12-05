@@ -11,16 +11,16 @@
         {
             "name": "Jarek Tkaczyk",
             "email": "jarek@softonsofa.com",
-            "homepage": "http://softonsofa.com/",
+            "homepage": "https://softonsofa.com/",
             "role": "Developer"
         }
     ],
     "require": {
         "php": ">=7.0",
-        "illuminate/database": "^5.4|^6.0|^7.0"
+        "illuminate/database": ">=5.4"
     },
     "require-dev": {
-        "crysalead/kahlan": "~1.1"
+        "kahlan/kahlan": "~1.1"
     },
     "autoload": {
         "psr-4": {
@@ -29,5 +29,8 @@
     },
     "config": {
         "preferred-install": "dist"
+    },
+    "scripts": {
+        "test": "vendor/bin/kahlan"
     }
 }
