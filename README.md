@@ -1,6 +1,6 @@
 # Sofa/Hookable
 
-[![Build Status](https://travis-ci.org/jarektkaczyk/hookable.svg)](https://travis-ci.org/jarektkaczyk/hookable) [![stable](https://poser.pugx.org/sofa/hookable/v/stable.svg)](https://packagist.org/packages/sofa/hookable) [![Downloads](https://poser.pugx.org/sofa/hookable/downloads)](https://packagist.org/packages/sofa/hookable)
+[![GitHub Tests Action Status](https://github.com/jarektkaczyk/hookable/workflows/Tests/badge.svg)](https://github.com/jarektkaczyk/hookable/actions?query=workflow%3Atests+branch%3Amaster) [![stable](https://poser.pugx.org/sofa/hookable/v/stable.svg)](https://packagist.org/packages/sofa/hookable) [![Downloads](https://poser.pugx.org/sofa/hookable/downloads)](https://packagist.org/packages/sofa/hookable)
 
 Hooks system for the [Eloquent ORM (Laravel 5.2)](https://laravel.com/docs/5.2/eloquent).
 
