@@ -50,7 +50,7 @@ class Builder extends EloquentBuilder
      */
     public function callParent($method, array $args)
     {
-        return call_user_func_array("parent::{$method}", $args);
+        return call_user_func_array(['parent', $method], $args);
     }
 
     /**
